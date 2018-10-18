@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Ranga', cursive;
-    color: #448AFF;
+    /* color: #448AFF; */
 }
 
 body {
@@ -14,6 +14,7 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 ul {
@@ -35,10 +36,14 @@ h1 {
     text-align: left;
 }
 
+#show-nav {
+    display: block;
+}
+
 /* Header styles */
 
 header {
-    background-image: url('../assets/header2.jpg');
+    background-image: url('../header3.jpg');
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
@@ -59,6 +64,11 @@ nav ul li {
     margin: 20px;
     margin-top: 30px;
     font-weight: bold;
+   
+}
+
+nav ul li a {
+    color: white;
 }
 
 nav ul li a:hover {
@@ -66,7 +76,6 @@ nav ul li a:hover {
 }
 
 header div {
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,12 +87,13 @@ header div {
 
 header>div>p {
     font-size: 30px;
-    color: #448AFF;
+    color: white;
 }
+
 #title {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
-    color: #448AFF;
+    color: white;
     letter-spacing: 5px;
 }
 
@@ -140,6 +150,35 @@ header>div>p {
     border: 3px solid #FFA000;
 }
 
+@media(max-width: 700px) {
+    nav ul {
+        justify-content: center;
+    }
+    #title {
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    header div {
+        min-height: 0;
+    }
+
+    #title {
+        font-size: 35px;
+    }
+}
+
 /* About section Styles */
 
 #about {
@@ -151,7 +190,7 @@ header>div>p {
 #about div {
     display: flex;
     justify-content: space-between;
-    color: #448AFF;
+    color: #212121;
 }
 
 #about div p {
@@ -160,11 +199,40 @@ header>div>p {
     font-size: 25px;
 }
 
+@media(max-width: 900px) {
+    #about {
+        height: 400px;
+    }
+}
+
+@media(max-width: 700px) {
+
+    #about {
+        margin: 20px;
+    }
+
+    #about div p {
+        font-size: 18px;
+    }
+
+    #about h1 {
+        margin-top: 15px;
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 350px) {
+    #about {
+        height: 500px;
+    }
+}
+
 /* Tools section Styles */
 
 #tools {
     background: #212121;
     padding-top: 30px;
+    color: white;
 }
 
 #tools ul {
@@ -185,7 +253,6 @@ header>div>p {
 
 #tools ul li p {
     font-size: 30px;
-    /* color: #FFA000; */
 }
 
 .fa-js {
@@ -199,6 +266,10 @@ header>div>p {
 
 .fa-html5 {
     color: #e34f26;
+}
+
+.fa-css3-alt {
+    color: #448AFF;
 }
 
 .fa-npm {
@@ -236,17 +307,35 @@ header>div>p {
     text-align: center;
     margin: 20px;
     position: relative;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.github {
+    position: absolute;
+    visibility: hidden;
+    bottom: 120px;
+    left: 130px;
+    padding: 10px;
+}
+
+.demo {
+    position: absolute;
+    visibility: hidden;
+    bottom: 120px;
+    left: 300px;
+    padding: 10px;
+    width: 80px;
 }
 
 .a {
     position: absolute;
     visibility: hidden;
-    visibility: hidden;
     bottom: 120px;
-    left: 190px;
+    left: 200px;
     padding: 10px;
 }
-
 
 #portfolio ul li img {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -259,12 +348,52 @@ header>div>p {
     opacity: 0.5;
 }
 
-#portfolio ul li:hover .a {
+#portfolio ul li:hover .a, #portfolio ul li:hover .github, #portfolio ul li:hover .demo {
     visibility: initial;
     height: 60px;
-    background: black;
+    background: #24292e;
     font-size: 25px;
     border-radius: 10px; 
+}
+
+@media(max-width:1100px) {
+    #portfolio ul li img {
+        width: 300px;
+    }
+
+    .a {
+        left: 103px;
+    }
+
+    .github {
+        left: 30px;
+    }
+
+    .demo { 
+        left: 185px;
+    }
+}
+
+@media(max-width: 700px) {
+    #portfolio ul {
+        flex-direction: column;
+    }
+
+    #portfolio ul li img {
+        width: 400px
+    }
+
+    .a {
+        left: 150px;
+    }
+
+    .github { 
+        left: 60px;
+    }
+
+    .demo { 
+        left: 250px
+    }
 }
 
 /* Contact section Styles */
@@ -276,6 +405,7 @@ header>div>p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 #contact h1 {
@@ -451,13 +581,33 @@ header>div>p {
     border: 3px solid #FFA000;
 }
 
+@media (max-width: 600px) {
+    #form {
+        width: 400px;
+    }
+}
+
+@media(max-width: 450px) {
+    #form {
+        width: 300px;
+    }
+}
+
+@media(max-width: 320px) {
+    #form {
+        width: 250px;
+    }
+}
+
 /* Footer Styles */
 
 footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     background: #171a1d;
+    color: white;
 }
 
 footer p {
@@ -481,3 +631,24 @@ footer ul li {
 footer ul li a:hover {
     color: #FFA000;
 }
+
+@media (max-width:780px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        order: 2;
+    }
+
+    footer ul {
+        flex-direction: column;
+        justify-content: center;
+        order: 1;
+    }
+
+    footer ul li {
+        margin: 0;
+    }
+}
+
