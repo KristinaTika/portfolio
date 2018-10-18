@@ -2,7 +2,6 @@ const mail = document.querySelector('.mail-btn');
 const msg = document.querySelector('#content');
 msg.value = '';
 mail.addEventListener("click", (e) => {
-    e.preventDefault();
     const name = document.querySelector('#name');
     const email = document.querySelector('#email');
     const valMsg = document.querySelector('.hide');
