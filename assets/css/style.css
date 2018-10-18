@@ -424,6 +424,7 @@ header>div>p {
     letter-spacing:0.5rem;
     text-indent:0.5rem;
     cursor:pointer;
+    color: white;
     transition:
       color 1.5s .5s,
       border 3s 1s;
