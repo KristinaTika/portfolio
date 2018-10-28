@@ -43,7 +43,7 @@ h1 {
 /* Header styles */
 
 header {
-    background-image: url('../header3.jpg');
+    background-image: url('../photos/header3.jpg');
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
