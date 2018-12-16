@@ -18,3 +18,30 @@ mail.addEventListener("click", (e) => {
     msg.value = "";
     setTimeout(() => mail.classList.remove("fly"), 5400);
 });
+
+let i = 0;
+let z = 0;
+const nameText = "Welcome, I'm Kristina,";
+const titleText = " FRONT END DEVELOPER.";
+const domText = document.querySelector('p');
+const domTitle = document.querySelector('#title');
+
+const typingEffect = () => {
+    if( i < nameText.length) {
+        domText.innerHTML += nameText.charAt(i);
+        i++;
+        setTimeout(typingEffect, 100);
+    }
+}
+
+typingEffect();
+
+const typingEffect2 = () => {
+    if(z < titleText.length) {
+        domTitle.innerHTML += titleText.charAt(i);
+        z++;
+        setTimeout(typingEffect2, 100);
+    }
+}
+
+typingEffect2();
